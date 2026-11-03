@@ -1,0 +1,247 @@
+/* PAGE LAYOUT */
+
+.user-register-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  background: #ffffff;
+}
+
+/* LEFT IMAGE SECTION */
+
+.user-register-image {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.user-register-overlay {
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15)
+  );
+  color: #ffffff;
+}
+
+.user-register-overlay span {
+  color: #e32636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.user-register-overlay h2 {
+  font-size: clamp(35px, 4vw, 55px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+  font-weight: 800;
+}
+
+.user-register-overlay p {
+  max-width: 390px;
+  color: #dddddd;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* RIGHT FORM SECTION */
+
+.user-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 8%;
+  background: #ffffff;
+}
+
+.user-register-content {
+  width: 100%;
+  max-width: 480px;
+}
+
+.user-register-label {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.user-register-content h1 {
+  color: #111111;
+  font-size: 34px;
+  margin: 12px 0 8px;
+  font-weight: 800;
+}
+
+.user-register-subtitle {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* FORM FIELDS */
+
+.user-register-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.user-register-field label {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.user-register-field input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background: #fafafa;
+  color: #222222;
+  font-size: 13px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.user-register-field input:focus {
+  border-color: #e32636;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.08);
+}
+
+.user-register-field input::placeholder {
+  color: #aaaaaa;
+}
+
+/* ERROR MESSAGES */
+
+.register-error {
+  color: #e32636;
+  font-size: 11px;
+  margin: 6px 0 0;
+}
+
+/* CREATE ACCOUNT BUTTON */
+
+.user-register-content form > button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  background: #e32636;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user-register-content form > button:hover {
+  background: #bd1828;
+  transform: translateY(-2px);
+}
+
+.user-register-content form > button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* SIGN IN LINK */
+
+.register-link {
+  text-align: center;
+  color: #777777;
+  font-size: 13px;
+  margin-top: 24px;
+}
+
+.register-link a {
+  color: #e32636;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* BACK TO HOME */
+
+.user-register-back {
+  display: block;
+  margin: 20px auto 0;
+  border: none;
+  background: transparent;
+  color: #333333;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user-register-back:hover {
+  color: #e32636;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  .user-register-page {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .user-register {
+    padding: 35px 6%;
+  }
+
+  .user-register-content h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 750px) {
+  .user-register-page {
+    grid-template-columns: 1fr;
+  }
+
+  .user-register-image {
+    min-height: 280px;
+  }
+
+  .user-register-overlay {
+    padding: 35px 25px;
+  }
+
+  .user-register-overlay h2 {
+    font-size: 35px;
+  }
+
+  .user-register {
+    padding: 40px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-register-content h1 {
+    font-size: 27px;
+  }
+}

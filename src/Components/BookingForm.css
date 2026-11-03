@@ -1,0 +1,203 @@
+/* BOOKING FORM CONTAINER */
+.booking-form-container {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* FORM HEADER */
+.booking-form-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.booking-form-header span {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.booking-form-header h2 {
+  color: #111111;
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.booking-form-header p {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FORM LAYOUT */
+.booking-form-container .booking-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form-container label {
+  margin-bottom: 9px;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.booking-form-container input,
+.booking-form-container select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #222222;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.booking-form-container input:focus,
+.booking-form-container select:focus {
+  border-color: #e32636;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.07);
+}
+
+.booking-form-container input:disabled,
+.booking-form-container select:disabled {
+  background: #f2f2f2;
+  cursor: not-allowed;
+}
+
+/* VALIDATION */
+.booking-form-container .error {
+  color: #e32636;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+/* SELECTED VEHICLE */
+.selected-car-summary {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  margin: 5px 0;
+  background: #f7f7f7;
+  border-left: 4px solid #e32636;
+}
+
+.selected-car-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.selected-car-summary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.selected-car-summary:hover img {
+  transform: scale(1.04);
+}
+
+.selected-car-info span {
+  color: #e32636;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.selected-car-summary h3 {
+  color: #111111;
+  font-size: 20px;
+  margin: 12px 0 6px;
+}
+
+.selected-car-summary p {
+  color: #777777;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.selected-car-summary strong {
+  color: #e32636;
+  font-size: 20px;
+}
+
+/* SUBMIT BUTTON */
+.booking-form-container .booking-fields > button {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 16px;
+  margin-top: 5px;
+  background: #e32636;
+  color: #ffffff;
+  border: 1px solid #e32636;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-form-container .booking-fields > button:hover {
+  background: #bd1828;
+  border-color: #bd1828;
+  transform: translateY(-2px);
+}
+
+.booking-form-container .booking-fields > button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* TABLET */
+@media (max-width: 650px) {
+  .booking-form-container {
+    padding: 28px;
+  }
+
+  .booking-form-container .booking-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-car-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-car-image {
+    height: 200px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+  .booking-form-container {
+    padding: 20px;
+  }
+
+  .booking-form-header h2 {
+    font-size: 25px;
+  }
+
+  .selected-car-image {
+    height: 160px;
+  }
+}

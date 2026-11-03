@@ -1,0 +1,258 @@
+/* PAGE */
+
+.vendor-form-page {
+  min-height: 100vh;
+  padding: 65px 6%;
+  background: #f4f4f4;
+}
+
+/* HEADING */
+
+.vendor-form-heading {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.vendor-form-heading span {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.vendor-form-heading h1 {
+  color: #111111;
+  font-size: 38px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.vendor-form-heading p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* FORM CARD */
+
+.vendor-form {
+  max-width: 950px;
+  margin: auto;
+  padding: 38px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* CARD HEADING */
+
+.vendor-form-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.vendor-form-card-heading span {
+  color: #e32636;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vendor-form-card-heading h2 {
+  color: #111111;
+  font-size: 22px;
+  margin: 8px 0 0;
+}
+
+.vendor-form-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e32636;
+  color: #ffffff;
+  font-size: 25px;
+  border-radius: 6px;
+}
+
+/* FORM GRID */
+
+.vendor-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px 20px;
+}
+
+.vendor-form-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.full-vendor-width {
+  grid-column: 1 / -1;
+}
+
+/* LABELS */
+
+.vendor-form-field label {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+/* INPUTS */
+
+.vendor-form-field input,
+.vendor-form-field select,
+.vendor-form-field textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background: #fafafa;
+  color: #222222;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.vendor-form-field input:focus,
+.vendor-form-field select:focus,
+.vendor-form-field textarea:focus {
+  border-color: #e32636;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.07);
+}
+
+.vendor-form-field input::placeholder,
+.vendor-form-field textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.vendor-form-field input[readonly] {
+  background: #eeeeee;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.vendor-form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ERROR MESSAGES */
+
+.vendor-form-error {
+  color: #e32636;
+  font-size: 11px;
+  margin: 7px 0 0;
+}
+
+/* VEHICLE IMAGE PREVIEW */
+
+.vendor-car-preview {
+  display: block;
+  width: 220px;
+  height: 135px;
+  margin-top: 15px;
+  border-radius: 7px;
+  object-fit: cover;
+  border: 1px solid #eeeeee;
+}
+
+/* FORM BUTTONS */
+
+.vendor-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 32px;
+  padding-top: 25px;
+  border-top: 1px solid #eeeeee;
+}
+
+.vendor-form-actions button {
+  padding: 14px 27px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vendor-form-cancel {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #dddddd;
+}
+
+.vendor-form-cancel:hover {
+  background: #eeeeee;
+}
+
+.vendor-form-submit {
+  background: #e32636;
+  color: #ffffff;
+  border: 1px solid #e32636;
+}
+
+.vendor-form-submit:hover {
+  background: #bd1828;
+  border-color: #bd1828;
+  transform: translateY(-2px);
+}
+
+.vendor-form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .vendor-form-page {
+    padding: 45px 5%;
+  }
+
+  .vendor-form {
+    padding: 25px 20px;
+  }
+
+  .vendor-form-heading h1 {
+    font-size: 30px;
+  }
+
+  .vendor-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-vendor-width {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .vendor-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .vendor-form-actions button {
+    width: 100%;
+  }
+
+  .vendor-form-card-heading h2 {
+    font-size: 19px;
+  }
+}

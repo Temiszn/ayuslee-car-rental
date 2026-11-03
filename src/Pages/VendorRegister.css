@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+.vendor-register-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  background: #ffffff;
+}
+
+/* LEFT IMAGE SECTION */
+
+.vendor-register-image {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.vendor-register-overlay {
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15)
+  );
+  color: #ffffff;
+}
+
+.vendor-register-overlay span {
+  color: #e32636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.vendor-register-overlay h2 {
+  font-size: clamp(35px, 4vw, 55px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+  font-weight: 800;
+}
+
+.vendor-register-overlay p {
+  max-width: 390px;
+  color: #dddddd;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* RIGHT FORM SECTION */
+
+.vendor-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 7%;
+  background: #ffffff;
+}
+
+.vendor-register-content {
+  width: 100%;
+  max-width: 620px;
+}
+
+.vendor-register-label {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.vendor-register-content h1 {
+  color: #111111;
+  font-size: 34px;
+  margin: 12px 0 8px;
+  font-weight: 800;
+}
+
+.vendor-register-subtitle {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* FORM GRID */
+
+.vendor-register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+}
+
+.vendor-register-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.full-register-width {
+  grid-column: 1 / -1;
+}
+
+.vendor-register-field label {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.vendor-register-field input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background: #fafafa;
+  color: #222222;
+  font-size: 13px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.vendor-register-field input:focus {
+  border-color: #e32636;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.08);
+}
+
+.vendor-register-field input::placeholder {
+  color: #aaaaaa;
+}
+
+.register-error {
+  color: #e32636;
+  font-size: 11px;
+  margin: 6px 0 0;
+}
+
+/* IMAGE PREVIEW */
+
+.register-image-preview {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 12px;
+  border: 2px solid #e32636;
+}
+
+/* CREATE ACCOUNT BUTTON */
+
+.vendor-register-content form > button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  background: #e32636;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vendor-register-content form > button:hover {
+  background: #bd1828;
+  transform: translateY(-2px);
+}
+
+.vendor-register-content form > button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* LOGIN LINK */
+
+.vendor-register-login {
+  text-align: center;
+  color: #777777;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.vendor-register-login a {
+  color: #e32636;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vendor-register-login a:hover {
+  text-decoration: underline;
+}
+
+/* BACK BUTTON */
+
+.vendor-register-back {
+  display: block;
+  margin: 18px auto 0;
+  border: none;
+  background: transparent;
+  color: #333333;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vendor-register-back:hover {
+  color: #e32636;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  .vendor-register-page {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .vendor-register {
+    padding: 35px 5%;
+  }
+
+  .vendor-register-content h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 750px) {
+  .vendor-register-page {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-register-image {
+    min-height: 280px;
+  }
+
+  .vendor-register-overlay {
+    padding: 35px 25px;
+  }
+
+  .vendor-register-overlay h2 {
+    font-size: 35px;
+  }
+
+  .vendor-register {
+    padding: 40px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vendor-register-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-register-width {
+    grid-column: auto;
+  }
+
+  .vendor-register-content h1 {
+    font-size: 27px;
+  }
+}

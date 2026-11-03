@@ -1,0 +1,215 @@
+.vendor-login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+}
+
+/* LEFT IMAGE SECTION */
+
+.vendor-login-image {
+  position: relative;
+  min-height: 650px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7")
+    center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 65px;
+}
+
+.vendor-login-overlay {
+  color: #fff;
+  max-width: 450px;
+}
+
+.vendor-login-overlay span {
+  color: #e32636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.vendor-login-overlay h2 {
+  font-size: 43px;
+  line-height: 1.25;
+  margin: 20px 0;
+}
+
+.vendor-login-overlay p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* RIGHT LOGIN SECTION */
+
+.vendor-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 10%;
+}
+
+.vendor-login-content {
+  width: 100%;
+  max-width: 430px;
+}
+
+.vendor-login-label {
+  color: #e32636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.vendor-login-content h1 {
+  font-size: 36px;
+  margin: 15px 0 10px;
+  color: #111;
+}
+
+.vendor-login-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* FORM */
+
+.vendor-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.vendor-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.vendor-login-field label {
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vendor-login-field input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.vendor-login-field input:focus {
+  border-color: #e32636;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.08);
+}
+
+.login-error {
+  color: #e32636;
+  font-size: 12px;
+}
+
+/* SIGN IN BUTTON */
+
+.vendor-login form button {
+  background: #e32636;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 5px;
+}
+
+.vendor-login form button:hover {
+  background: #bd1726;
+  transform: translateY(-2px);
+}
+
+.vendor-login form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* REGISTER LINK */
+
+.register-link {
+  text-align: center;
+  margin-top: 28px;
+  color: #777;
+  font-size: 13px;
+}
+
+.register-link a {
+  color: #e32636;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* BACK BUTTON */
+
+.vendor-login-back {
+  display: block;
+  margin: 25px auto 0;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vendor-login-back:hover {
+  color: #e32636;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .vendor-login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-login-image {
+    min-height: 300px;
+    padding: 40px 7%;
+  }
+
+  .vendor-login-overlay h2 {
+    font-size: 32px;
+  }
+
+  .vendor-login {
+    padding: 55px 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vendor-login-image {
+    min-height: 250px;
+  }
+
+  .vendor-login-overlay h2 {
+    font-size: 27px;
+  }
+
+  .vendor-login-content h1 {
+    font-size: 30px;
+  }
+}

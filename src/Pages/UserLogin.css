@@ -1,0 +1,210 @@
+.user-login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT IMAGE SECTION */
+.user-login-image {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+  color: #ffffff;
+}
+
+.user-login-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.15)
+  );
+}
+
+.user-login-content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.user-login-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.user-login-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #eeeeee;
+}
+
+/* RIGHT FORM SECTION */
+.user-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 12%;
+  max-width: 650px;
+  width: 100%;
+  margin: auto;
+}
+
+.user-login-label {
+  color: #e32636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.user-login h2 {
+  font-size: 34px;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.user-login-subtitle {
+  color: #777777;
+  font-size: 14px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.user-login-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.user-login-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 9px;
+}
+
+.user-login-field input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.user-login-field input:focus {
+  border-color: #e32636;
+  box-shadow: 0 0 0 3px rgba(227, 38, 54, 0.08);
+}
+
+.login-error {
+  color: #e32636;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.user-login button {
+  width: 100%;
+  padding: 16px;
+  background: #e32636;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+.user-login button:hover {
+  background: #bd1828;
+  transform: translateY(-2px);
+}
+
+.user-login button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 13px;
+  color: #666666;
+  margin-top: 25px;
+}
+
+.register-link a {
+  color: #e32636;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.user-login-back {
+  display: inline-block;
+  margin-top: 25px;
+  text-align: center;
+  color: #555555;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.user-login-back:hover {
+  color: #e32636;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .user-login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .user-login-image {
+    min-height: 320px;
+    padding: 35px;
+  }
+
+  .user-login-content h1 {
+    font-size: 32px;
+  }
+
+  .user-login {
+    padding: 55px 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-login-image {
+    min-height: 260px;
+    padding: 25px;
+  }
+
+  .user-login-content h1 {
+    font-size: 27px;
+  }
+
+  .user-login {
+    padding: 40px 7%;
+  }
+
+  .user-login h2 {
+    font-size: 28px;
+  }
+}

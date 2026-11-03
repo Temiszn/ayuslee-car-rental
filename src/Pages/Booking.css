@@ -1,0 +1,81 @@
+.booking-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+.booking-hero {
+  padding: 75px 9%;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.93), rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1503376780353-7e669276c70?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: #fff;
+}
+
+.booking-hero > p:first-child {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.booking-hero h1 {
+  font-size: clamp(36px, 5vw, 55px);
+  margin: 20px 0;
+}
+
+.booking-hero h1 span {
+  color: #e32636;
+}
+
+.booking-hero > p:last-child {
+  max-width: 520px;
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.booking-content {
+  max-width: 1050px;
+  margin: auto;
+  padding: 65px 25px 90px;
+}
+
+.booking-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.booking-heading span {
+  color: #e32636;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.booking-heading h2 {
+  font-size: 32px;
+  margin: 13px 0;
+}
+
+.booking-heading p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .booking-hero {
+    padding: 60px 7%;
+  }
+
+  .booking-content {
+    padding: 50px 18px 65px;
+  }
+
+  .booking-heading h2 {
+    font-size: 27px;
+  }
+}

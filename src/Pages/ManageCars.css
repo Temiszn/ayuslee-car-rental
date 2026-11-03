@@ -1,0 +1,78 @@
+.manage-cars {
+  padding: 40px;
+  background-color: #f4f5f7;
+  min-height: 80vh;
+}
+
+.manage-cars h1 {
+  color: #101820;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.manage-cars > p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.manage-cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.manage-car-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.manage-car-info {
+  padding: 20px;
+}
+
+.manage-car-info h3 {
+  color: #101820;
+  margin-bottom: 12px;
+}
+
+.manage-car-info p {
+  margin-bottom: 10px;
+}
+
+.manage-car-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.manage-car-buttons button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #101820;
+  color: white;
+  cursor: pointer;
+}
+
+.manage-car-buttons .delete-car-button {
+  background-color: #e32636;
+}
+
+.manage-car-buttons button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .manage-cars {
+    padding: 20px 15px;
+  }
+}
