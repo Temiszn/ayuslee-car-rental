@@ -20,9 +20,11 @@ import EditCar from "./Pages/EditCar";
 import UserRegister from "./Pages/UserRegister";
 import UserLogin from "./Pages/UserLogin";
 import AllVendors from "./Pages/AllVendors";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
      <Navbar />
      <ToastContainer />
       <Routes>

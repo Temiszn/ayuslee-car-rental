@@ -79,7 +79,14 @@ const Home = () => {
 
   const [cars, setCars] = useState([]);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [showDiscountPopup, setShowDiscountPopup] = useState(true);
+  const [showDiscountPopup, setShowDiscountPopup] = useState(false);
+  useEffect(() => {
+  const popupTimer = setTimeout(() => {
+    setShowDiscountPopup(true);
+  }, 3000);
+
+  return () => clearTimeout(popupTimer);
+}, []);
 
   const [discountCountdown, setDiscountCountdown] = useState({
     days: 30,
@@ -311,10 +318,13 @@ useEffect(() => {
               key={slide.number}
               aria-hidden={activeSlide !== index}
             >
-              <img
-                className="hero-slide-image"
-                src={slide.image}
-                alt={slide.alt}
+           <img
+  className="hero-slide-image"
+  src={slide.image}
+  alt={slide.alt}
+  fetchPriority={index === 0 ? "high" : "auto"}
+  loading={index === 0 ? "eager" : "lazy"}
+
               />
 
               <div className="hero-slide-overlay"></div>
